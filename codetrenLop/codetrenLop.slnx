@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="codetrenLop/codetrenLop.vcxproj" />
+  <Project Path="codetrenLop/codetrenLop.vcxproj" Id="61e28529-4b1f-48c2-b74f-563e68775304" />
 </Solution>
