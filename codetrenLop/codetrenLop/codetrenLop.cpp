@@ -40,6 +40,27 @@ void sapXepMang()
 		printf("mang[%d] = %d\n", i, integerArray[i]);
 	}
 }
+void demoMang2Chieu()
+{
+	int array[2][3];
+
+	for (int j = 0; j < 3; j++)
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			printf("mang[%d][%d] = ", i, j);
+			scanf_s("%d, ", &array[i][j]);
+		}
+	}
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d, ", array[i][j]);
+		}
+		printf("\n");
+	}
+}
 
 int main()
 {
@@ -52,7 +73,7 @@ int main()
 		printf("\n");
 		printf("2. Sap xep phan tu mang 1 chieu");
 		printf("\n");
-		printf("3. TEN chuc nang 3");
+		printf("3. demoMang2chieu");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
@@ -67,7 +88,7 @@ int main()
 			sapXepMang();
 			break;
 		case 3:
-			
+			demoMang2Chieu();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
