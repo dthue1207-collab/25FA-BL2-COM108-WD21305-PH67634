@@ -2,6 +2,7 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 void kiemTraSoNguyen()
 {
@@ -61,7 +62,49 @@ void demoMang2Chieu()
 		printf("\n");
 	}
 }
+void demoString()
+{
+	//string - string.h
+	char mangkyTu[50];
+	while (getchar() != '\n');
+	printf("Nhap du lieu String: ");
 
+	//su dung ham "fgets" thay cho ham "gets"(C thuan)
+	fgets(mangkyTu, sizeof(mangkyTu), stdin);
+
+	//xuat du lieu dung "%s" - Khong in them dau xuong dong
+	printf("%s", mangkyTu);
+	printf("\n");
+
+	printf("%d", strlen(mangkyTu) -1);
+	printf("\n");
+
+	printf("%d", strcmp("B", "b"));
+	printf("\n");
+
+	char str[5] = "ABC";
+	printf("%s", strrev("str"));
+	printf("\n");
+
+	printf("%s", strlwr("str"));
+	printf("\n");
+
+		printf("%s", strupr ("str"));
+		printf("\n");
+		if (strstr("ABC", "D") != NULL;
+		{
+			printf(strstr("ABC", "D"))
+		}
+		else
+		{
+			printf("NOT FOUND");
+		}
+		
+
+
+	//xuat du lieu dung ham "puts" - In them dau xuong dong
+	//puts(name);
+}
 int main()
 {
 	int chonChucNang;
@@ -74,6 +117,8 @@ int main()
 		printf("2. Sap xep phan tu mang 1 chieu");
 		printf("\n");
 		printf("3. demoMang2chieu");
+		printf("\n");
+		printf("4. demoString");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
@@ -89,6 +134,9 @@ int main()
 			break;
 		case 3:
 			demoMang2Chieu();
+			break;
+		case 4:
+			demoString();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");

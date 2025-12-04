@@ -3,9 +3,14 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 void kiem_tra_so_chinh_phuong()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	int n;
 	printf("Nhap so n: ");
 	scanf_s("%d", &n);
@@ -19,12 +24,21 @@ void kiem_tra_so_chinh_phuong()
 	if (sqrt_n * sqrt_n == n) {
 		printf("%d la so chinh phuong.\n", n);
 	}
-	else {
+	else 
+	{
 		printf("%d khong phai la so chinh phuong.\n", n);
 	}
+	printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	printf("\n");
+	scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void tim_uoc_chung_va_boi_so_chung_cua_hai_so()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	printf("Chuong trinh dang phat trien\n");
 	int a, b;
 	printf("Nhap hai so nguyen a va b: ");
@@ -43,24 +57,41 @@ void tim_uoc_chung_va_boi_so_chung_cua_hai_so()
 	int boi_so = (a * b) / uoc_chung;
 	printf("Uoc chung lon nhat cua %d va %d la: %d\n", a, b, uoc_chung);
 	printf("Boi so chung nho nhat cua %d va %d la: %d\n", a, b, boi_so);
+
+		printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	    printf("\n");
+	    scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void tinh_tien_cho_quan_karaoke()
 {
-	int gio, phut;
-	float tien_gio, tien_phut;
+	char Tieptuc;
+	do
+	{
+		system("cls");
+		int gio, phut;
+		float tien_gio, tien_phut;
 
-	printf("Nhap so gio: ");
-	scanf_s("%d", &gio);
-	printf("Nhap so phut: ");
-	scanf_s("%d", &phut);
+		printf("Nhap so gio: ");
+		scanf_s("%d", &gio);
+		printf("Nhap so phut: ");
+		scanf_s("%d", &phut);
 
-	tien_gio = gio * 100000;
-	tien_phut = phut * (100000 / 60);
-	float tong_tien = tien_gio + tien_phut;
-	printf("Tong tien cho %d gio %d phut phai tra la: %.f VND\n", gio, phut, tong_tien);
+		tien_gio = gio * 100000;
+		tien_phut = phut * (100000 / 60);
+		float tong_tien = tien_gio + tien_phut;
+		printf("Tong tien cho %d gio %d phut phai tra la: %.f VND\n", gio, phut, tong_tien);
+		printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+		printf("\n");
+		scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void tinh_tien_dien()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	int so_kWh;
 	printf("Nhap so kWh tieu thu: ");
 	scanf_s("%d", &so_kWh);
@@ -68,10 +99,18 @@ void tinh_tien_dien()
 	float tien_dien;
 
 	tien_dien = so_kWh * 3500;
-	printf("Tong tien dien phai tra la: %.f VND\n", tien_dien);
+	printf("Tong tien Bdien phai tra la: %.f VND\n", tien_dien);
+	printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	printf("\n");
+	scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void doi_tien()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	int tien;
 	int menhGia[] = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 	int soTo[9] = { 0 };
@@ -88,9 +127,17 @@ void doi_tien()
 		if (soTo[i] > 0)
 			printf("%d to %d\n", soTo[i], menhGia[i]);
 	}
+	printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	printf("\n");
+	scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void tinh_lai_suat_vay_ngan_hang_tra_gop()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	float so_tien_vay, lai_suat, thoi_gian, tong_tien, tien_tra_theo_thang;
 
 	printf("Nhap so tien vay: ");
@@ -112,9 +159,18 @@ void tinh_lai_suat_vay_ngan_hang_tra_gop()
 	printf("So tien vay: %.f VND\n", so_tien_vay);
 	printf("Tien phai tra moi thang: %.2f VND\n", tien_tra_theo_thang);
 	printf("Tong tien phai tra sau %.f thang vay la: %.f VND\n", thoi_gian, tong_tien);
+
+		printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	    printf("\n");
+	    scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void vay_tien_mua_xe()
 {
+	char Tieptuc;
+	do
+	{
+		system("cls");
 	float gia_xe, tien_dat_coc, so_tien_vay, lai_suat, thoi_gian_vay, tong_tien_phai_tra = 0, tien_tra_theo_thang = 0;
 	printf("Nhap gia xe: ");
 	scanf_s("%f", &gia_xe);
@@ -142,6 +198,10 @@ void vay_tien_mua_xe()
 	printf("So tien vay: %.f VND\n", so_tien_vay);
 	printf("Tien phai tra moi thang: %.f VND\n", tien_tra_theo_thang);
 	printf("Tong tien phai tra sau %.0f thang vay la: %.f VND\n", thoi_gian_vay, tong_tien_phai_tra);
+		printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	    printf("\n");
+	    scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 void sap_xem_thong_tin_sinh_vien()
 {
@@ -153,33 +213,41 @@ void xay_dung_game_FPOLY_LOTT()
 }
 void tinh_toan_phan_so()
 {
-	int a, b, c, d;
+	char Tieptuc;
+	do
+	{
+			system("cls");
+		int a, b, c, d;
 
-	printf("Nhap tu va mau cua phan so 1: ");
-	scanf_s("%d%d", &a, &b);
+		printf("Nhap tu va mau cua phan so 1: ");
+		scanf_s("%d%d", &a, &b);
 
-	printf("Nhap tu va mau cua phan so 2: ");
-	scanf_s("%d%d", &c, &d);
+		printf("Nhap tu va mau cua phan so 2: ");
+		scanf_s("%d%d", &c, &d);
 
-	// Tong
-	int tong_tu = a * d + c * b;
-	int tong_mau = b * d;
-	printf("Tong: %d/%d\n", tong_tu, tong_mau);
+		// Tong
+		int tong_tu = a * d + c * b;
+		int tong_mau = b * d;
+		printf("Tong: %d/%d\n", tong_tu, tong_mau);
 
-	// Hieu
-	int hieu_tu = a * d - c * b;
-	int hieu_mau = b * d;
-	printf("Hieu: %d/%d\n", hieu_tu, hieu_mau);
+		// Hieu
+		int hieu_tu = a * d - c * b;
+		int hieu_mau = b * d;
+		printf("Hieu: %d/%d\n", hieu_tu, hieu_mau);
 
-	// Tich
-	int tich_tu = a * c;
-	int tich_mau = b * d;
-	printf("Tich: %d/%d\n", tich_tu, tich_mau);
+		// Tich
+		int tich_tu = a * c;
+		int tich_mau = b * d;
+		printf("Tich: %d/%d\n", tich_tu, tich_mau);
 
-	// Thuong
-	int thuong_tu = a * d;
-	int thuong_mau = b * c;
-	printf("Thuong: %d/%d\n", thuong_tu, thuong_mau);
+		// Thuong
+		int thuong_tu = a * d;
+		int thuong_mau = b * c;
+		printf("Thuong: %d/%d\n", thuong_tu, thuong_mau);
+		printf("Ban co muon tiep tuc chuc nang nay khong (y/n)? ");
+	    printf("\n");
+	    scanf_s("%c", &Tieptuc);
+	} while (Tieptuc == 'y' || Tieptuc == 'Y');
 }
 
 
